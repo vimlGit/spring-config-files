@@ -1,0 +1,35 @@
+spring:
+   application:
+      name: ZomatoService
+   datasource:
+      url: jdbc:mysql://localhost:3306/eventdb
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: root
+
+  #hibernate properties
+      hikari:
+         maximum-pool-size: 10
+         minimum-idle: 5
+         idle-timeout: 30000
+         connection-timeout: 30000
+         max-lifetime: 60000
+
+   jpa:
+      show-sql: true
+      properties:
+         hibernate:
+            dialect: org.hibernate.dialect.MySQL8Dialect
+
+         ddl-auto: update
+server:
+  port: 9094
+
+  #Actuator properties
+management:
+  endpoints:
+     web:
+        exposure.include: "*"
+     health:
+        show-details: always
+
