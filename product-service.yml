@@ -1,6 +1,6 @@
 spring:
    application:
-      name: ZomatoService
+      name: ProductService
    datasource:
       url: jdbc:mysql://localhost:3306/eventdb
       driver-class-name: com.mysql.cj.jdbc.Driver
@@ -23,13 +23,7 @@ spring:
 
          ddl-auto: update
 server:
-  port: 9094
+  port: 4041
 
-  #Actuator properties
-management:
-  endpoints:
-     web:
-        exposure.include: "*"
-     health:
-        show-details: always
+ 
 
