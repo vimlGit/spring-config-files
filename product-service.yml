@@ -1,28 +1,27 @@
 spring:
-   application:
-      name: ProductService
-   datasource:
-      url: jdbc:mysql://localhost:3306/eventdb
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      username: root
-      password: root
+  application:
+    name: ProductService
 
-  #hibernate properties
-      hikari:
-         maximum-pool-size: 10
-         minimum-idle: 5
-         idle-timeout: 30000
-         connection-timeout: 30000
-         max-lifetime: 60000
+  datasource:
+    url: jdbc:mysql://localhost:3306/eventdb
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
 
-   jpa:
-      show-sql: true
-      properties:
-         hibernate:
-            dialect: org.hibernate.dialect.MySQL8Dialect
-            ddl-auto: update
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 30000
+      connection-timeout: 30000
+      max-lifetime: 60000
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
 server:
   port: 4041
-
- 
-
